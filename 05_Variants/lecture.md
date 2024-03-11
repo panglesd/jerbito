@@ -1,8 +1,5 @@
 # Variants
 
-**Note** Toutes les expressions présentées dans le cours doivent être évaluées
-dans `utop`.
-
 ## Résumé des types que l'on connait
 
 Avant d'aller plus loin, et de découvrir une des fonctionalité les plus
@@ -113,20 +110,13 @@ type maille = Endroit | Envers
 pu utiliser des booléens pour représenter ces valeurs, mais cela ne pourrait que
 nous mélanger les aiguilles, et générer des bugs !
 
-Nous pouvons maintenant utiliser ces valeurs:
+Nous pouvons maintenant filtrer et utiliser ces valeurs:
 
 ```ocaml
-let point_mousse = [ Endroit ]
-let point_jersey = [ Endroit; Envers ]
-```
-
-Et nous pouvons aussi filter !
-
-```ocaml
-let temps_necessaire maille =
+let esthetique maille =
   match maille with
-   | Endroit -> 1.
-   | Envers -> 1.5
+   | Endroit -> 1.3
+   | Envers -> 1.2
 
 let retournement maille =
   match maille with
@@ -197,3 +187,12 @@ Quand on crée une valeur, on utilise la syntaxe suivante :
 ```ocaml
 let branche_principale = Branch "main"
 ```
+
+### Encoder le format `json` dans un type OCaml
+
+## Quelques types variants importants
+
+### Le type `option`
+
+### le type `list`
+
